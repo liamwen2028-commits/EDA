@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>GRAND-01BLACK SKC 月度销量与价格曲线</title>
+  <title>EDA分析</title>
   <style>
     :root {
       --bg: #f4f6f8;
@@ -543,7 +543,7 @@
     <header class="topbar">
       <div class="title-row">
         <div>
-          <h1 id="pageTitle">GRAND-01BLACK SKC 月度销量与价格曲线</h1>
+          <h1 id="pageTitle">EDA分析</h1>
           <div class="meta" id="pageMeta"></div>
         </div>
         <div class="skc-select" id="skcPicker">
@@ -865,7 +865,7 @@
 
     function updateHeader(rows) {
       const summary = currentSkc === DEFAULT_SKC ? { ...BASE_SUMMARY, ...summarize(rows) } : summarize(rows);
-      document.getElementById("pageTitle").textContent = `${currentSkc} SKC 月度销量与价格曲线`;
+      document.getElementById("pageTitle").textContent = "EDA分析";
       document.getElementById("pageMeta").textContent = `${summary.source || "GRAND-01BLACK.xlsx"} · ${summary.monthCount} 个月 · ${summary.firstMonth} 至 ${summary.lastMonth}`;
       setText("kpiRange", `${summary.firstMonth} ~ ${summary.lastMonth}`);
       setText("kpiQuantity", formatQuantity(summary.totalQuantity));
